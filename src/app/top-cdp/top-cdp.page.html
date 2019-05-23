@@ -9,49 +9,56 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <ion-card *ngFor="let data of topData">
+  <ion-card class='kard' *ngFor="let data of topData">
     <ion-card-header>
       <ion-card-title>{{data.name}}</ion-card-title>
     </ion-card-header>
   
     <ion-card-content>
       <ion-list>
-        <ion-item>
+        <ion-item lines="none" color="light">
           <ion-icon color="primary" name="md-arrow-dropup" slot="start"></ion-icon>
           Top ETH
           <div class="item-note" slot="end">
             {{data.topEth| number}}
           </div>
         </ion-item>
-        <ion-item>
+        <ion-item lines="none" color="medium">
           <ion-icon color="danger" name="md-arrow-dropdown" slot="start"></ion-icon>
           Last ETH
           <div class="item-note" slot="end">
             {{data.lastEth| number}}
           </div>
         </ion-item>
-        <ion-item>
+        <ion-item lines="none" color="light">
           <ion-icon color="success" name="md-calculator" slot="start"></ion-icon>
           Avg ETH
           <div class="item-note" slot="end">
             {{data.averageEth| number}}
           </div>
         </ion-item>
-        <ion-item>
-          <ion-icon color="success" name="md-thermometer" slot="start"></ion-icon>
+        <ion-item lines="none" color="medium">
+          <ion-icon color="tertiary" name="md-thermometer" slot="start"></ion-icon>
           AVG Ratio
           <div class="item-note" slot="end">
             {{data.averageColRatio| number}}%
           </div>
         </ion-item>
-        <ion-item>
+        <ion-item lines="none" color="light">
+          <ion-icon color="medium" name="md-barcode" slot="start"></ion-icon>
+          Median Ratio
+          <div class="item-note" slot="end">
+            {{data.medianColRatio| number}}%
+          </div>
+        </ion-item>
+        <ion-item lines="none" color="medium">
           <ion-icon color="success" name="logo-usd" slot="start"></ion-icon>
           AVG Liquid
           <div class="item-note" slot="end">
             $ {{data.averageLiq | number}}
           </div>
         </ion-item>
-        <ion-item>
+        <ion-item lines="none" color="light">
           <ion-icon color="warning" name="md-pricetags" slot="start"></ion-icon>
           AVG Borrowed
           <div class="item-note" slot="end">

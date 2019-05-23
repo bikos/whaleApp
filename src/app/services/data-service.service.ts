@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import * as _ from 'lodash';
+import * as ss from 'simple-statistics';
 import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
@@ -45,6 +46,7 @@ export class DataService {
       lastEth: _.last(array).ink.toFixed(0),
       averageEth: _.meanBy(array, 'ink').toFixed(0),
       averageColRatio: _.meanBy(array, 'ratio').toFixed(0),
+      medianColRatio: ss.medianSorted(_.map(array, 'ratio')).toFixed(0),
       averageLiq: _.meanBy(array, 'liq_price').toFixed(0),
       averageColAmt: _.meanBy(array, 'art').toFixed(0)
     };
