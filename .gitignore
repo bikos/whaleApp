@@ -2,6 +2,5 @@ node_modules
 platforms
 plugins
 www
-tsconfig.json
 tslint.json
 e2e
