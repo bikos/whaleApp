@@ -1,0 +1,7 @@
+{
+  "name": "whaleWatch",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
